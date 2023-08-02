@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/1f3c10a661.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
+
+    <link href="https://unpkg.com/@primer/css@^16.0.0/dist/primer.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+        .intro {
+            font-family: 'Nunito', sans-serif;
+            font-size: xx-large;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+        }
+
+        .rv {
+            text-align: center;
+            align-items: center;
+            align-self: center;
+            font-size: x-large;
+            font-family: 'Nunito';
+            margin-top: 20px;
+        }
+
+        .rvr {
+            text-align: center;
+            align-items: center;
+            align-self: center;
+            font-size: xx-large;
+            font-family: 'Nunito';
+            margin-top: 20px;
+            color: #e91e63;
+        }
+
+
+        .sush {
+            text-align: center;
+            justify-content: center;
+            align-self: center;
+        }
+
+        .graph-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .skill-button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .skill-button:hover {
+            background-color: #00b351;
+        }
+
+        .skill-button.active {
+            background-color: #00b351;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        #skillsChart {
+            display: flex;
+            width: 600px;
+            height: 800px;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+
+        .chart-container {
+            margin-top: -20px;
+            position: relative;
+            width: 100px;
+            height: 50px;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+        body {
+            line-height: 1.5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1170px;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .footer {
+            background-color: #24262b;
+            padding: 10px 0;
+        }
+
+        .footer-col {
+            width: 25%;
+            padding: 0 15px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            color: #ffffff;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            font-weight: 500;
+            position: relative;
+        }
+
+
+
+        .footer-col ul li:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            font-size: 16px;
+            text-transform: capitalize;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 300;
+            color: #bbbbbb;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .footer-col ul li a:hover {
+            color: #ffffff;
+            padding-left: 8px;
+        }
+
+        .footer-col .social-links a {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: #ffffff;
+            transition: all 0.5s ease;
+        }
+
+        .footer-col .social-links a:hover {
+            color: #24262b;
+            background-color: #ffffff;
+        }
+
+        @media(max-width: 767px) {
+            .footer-col {
+                width: 50%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media(max-width: 574px) {
+            .footer-col {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="margin-top: -10px;">
+            <a class="navbar-brand" href="#"> <img class="salim" src="sushma.webp">SUSHMA PALLEDA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto" style="font-family: 'Nunito', sans-serif;">
+                    <a class="nav-link active nav-link js-scroll-trigger" href="#Education">Education</a>
+                    <a class="nav-link active nav-link js-scroll-trigger" href="#TechnicalSkill">Technical Skills</a>
+                    <a class="nav-link active nav-link js-scroll-trigger" href="#Intern">Internship</a>
+                    <a class="nav-link active nav-link js-scroll-trigger" href="#Project">Project</a>
+                    <a class="nav-link active nav-link js-scroll-trigger" href="#Contact">Contact</a>
+
+                </div>
+            </div>
+        </nav>
+
+
+
+    </header>
+    <div class="container" style="margin-top: 50px;">
+        <div class="row sush">
+            <div class="col-md-5"></div>
+            <img src="lecture-conference-svgrepo-com.svg" alt="image" height="170px" width="170px">
+
+            <p class="rv" position="relative"><b><span class="rvr">Hello,</span> I'm sushma..Web Development Intern at
+                    Revisewell.</b></h2>
+
+        </div>
+    </div>
+
+
+
+
+    <section class="Education mt-4" id="Education">
+        <h1 class="title">Education</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" style="margin-top:20px">
+                    <div class="card" style="width: 100%;">
+                        <h3 class="card-title sushma">SSLC</h3>
+                        <img src="school-svgrepo-com.svg" class="card-img-top" alt="image" height=170px width="170px"
+                            style="margin-top: -10px;">
+                        <div class="card-body">
+                            <ul>
+                                <li style="font-size: medium; font-family: 'Nunito', Times, serif; font-style: normal;">
+                                    <b>ST.joesph's girls high school ,ballari</b>
+                                </li>
+                                <li>KSEEB</li>
+                                <li>88.16%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="margin-top:20px">
+                    <div class="card" style="width: 100%;">
+                        <h3 class="card-title sushma">PUC</h3>
+                        <img src="read-svgrepo-com.svg" class="card-img-top" alt="image" height=170px width="170px"
+                            style="margin-top: -10px;">
+                        <div class="card-body">
+
+                            <ul>
+                                <li style="font-size: medium; font-family: 'Nunito', Times, serif; font-style: normal;">
+                                    <b>Ballari Independent pu college</b>
+                                </li>
+                                <li>Department of PUE</li>
+                                <li>70%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3" style="margin-top:20px">
+                    <div class="card" style="width: 100%;">
+                        <h3 class="card-title sushma">Graduation</h3>
+                        <img src="certificate-svgrepo-com.svg" class="card-img-top" alt="image" height=170px
+                            width="170px" style="margin-top: -10px;">
+                        <div class="card-body">
+
+                            <ul>
+                                <li style="font-size: medium; font-family: 'Nunito', Times, serif; font-style: normal;">
+                                    <b>Global academy of Technology</b>
+                                </li>
+                                <li>KSEEB</li>
+                                <li>8.3 CGPA</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section class="TechnicalSkills" id="TechnicalSkill">
+        <h1 class="title">Technical Skills</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="skills-container"></div>
+                    <canvas id="skillsChart"></canvas>
+                    <div class="chart-container">
+                        <canvas id="skillsChart" width="200" height="20"></canvas>
+                        <div id="skillPercentage" style="text-align: center; margin-top: 10px;"></div>
+                    </div>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Internship" id="Intern">
+        <h1 class="heading"><span>Internship</span></h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" style="margin-top:10px">
+                    <div class="card" style="width: 100%;">
+                        <pre> </pre>
+                        <img src="infosys-svgrepo-com.svg" class="card-img-top" alt="image" height="150px">
+                        <div class="card-body">
+                            <h5 class="card-title">WORKED ON EASY BANKING PROJECT ON THE DOMAIN "JAVA ANGULAR".
+
+                                <b>(infosys private ltd, Pune)</b>-2021-22
+                            </h5>
+                            <p class="description"> the intership on “java angular” for three months gained a knowledge
+                                gained about virtual
+                                machines,understanding about how project planning plays a important role.and gained a
+                                knowledge about the git
+                                repository .mangement skills how IT works.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-top:10px">
+                    <div class="card" style="width: 100%;">
+                        <img src="java-logo-svgrepo-com.svg" class="card-img-top" alt="..." height="150px">
+                        <div class="card-body">
+                            <h5 class="card-title">Java Full Stack Developer
+                                <b>(Kodnest Technologies pvt Ltd, Bengaluru)</b>-2023
+                            </h5>
+                            <p class="description">Kodnest is now offering a rigorous internship course with
+                                an emphasis on establishing competence as a Full Stack Java Developer. developed a
+                                thorough understanding of the Java programming language and web technologies including
+                                HTML, CSS,
+                                and JavaScript..</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <br><br>
+    <section class="Project" id="Project">
+        <h1 class="heading"><span>Project</span></h1>
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-md-4" style="margin-top:10px">
+                    <div class="card" style="width: 100%;">
+
+                        <img src="lungs-svgrepo-com.svg" class="card-img-top" alt="image" height="150px">
+                        <div class="card-body">
+                            <h5 class="card-title">PRAGMATIC APPROACH FOR DETECTION OF PNEUMONIA(Final Year
+                                Project)-2022</h5>
+                            <p class="description">The main objective of our project is to develop a deep learning
+                                framework using VGG16 model to automatically
+                                diagnose pneumonia using chest X-ray images and to classify the result as normal cases
+                                or pneumonia cases, which
+                                will help in quickly and easily diagnosing the disease..
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4" style="margin-top:10px">
+                    <div class="card" style="width: 100%;">
+                        <img src="banking-business-cash-svgrepo-com.svg" class="card-img-top" alt="image"
+                            height="150px">
+                        <div class="card-body">
+                            <h5 class="card-title">EASY BANKING SYSTEM-2022
+                            </h5>
+                            <p class="description">Developed an application that assists users and admin to register and
+                                login and perform activites as per there
+                                needs.they can do all the transcation in online mode,they can take help of support page
+                                for the required needs.
+                                as the application was user friendly it was more advantage for the customers
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-4" style="margin-top:10px">
+                    <div class="card" style="width: 100%;">
+                        <img src="destination-2-svgrepo-com.svg" class="card-img-top" alt="image" height="150px">
+                        <div class="card-body">
+                            <h5 class="card-title">TRAVELLING MANGMENT SYSTEM-2020</h5>
+                            <p class="description">Designed a web application to improve user efficiency with online
+                                booking and to assist admin in optimizing all
+                                reservations as well as organizing records.the user can book the tickets and cancel it
+                                anytime
+                                only admin has the right to update,modify the data .
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="Contact">
+        <div class="container ">
+            <div class="row sush">
+
+
+                <div class="footer-col">
+                    <h3 style="color: #ffffff;font-family:'Nunito';">Contact Me</h3>
+                    <hr class="dash">
+                    <div class="social-links">
+                        <a href="tel:7349209625"><i class="fa-solid fa-phone"></i></a>
+                        <a href="mailto: palleda.sushma42@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/sushma.palleda/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/sushma-palleda-890738246"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var skillsChart;
+        var skillButtons;
+        var skillPercentages = [80, 85, 90, 85, 75, 75, 70];
+
+        function highlightSkill(skillIndex) {
+           
+            for (var i = 0; i < skillButtons.length; i++) {
+                skillButtons[i].classList.remove("active");
+            }
+
+            
+            skillButtons[skillIndex].classList.add("active");
+
+           
+            var skillPercentageElement = document.getElementById("skillPercentage");
+            skillPercentageElement.innerText = "Skill Percentage: " + skillPercentages[skillIndex] + "%";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            skillsChart = new Chart(document.getElementById("skillsChart"), {
+                type: 'bar',
+                data: {
+                    labels: ["Java", "HTML", "CSS", "Oracle SQL", "MySQL", "cloud", "Data Structures"],
+                    datasets: [{
+                        data: skillPercentages,
+                        backgroundColor: [
+                            "#007bff",
+                            "#00b351",
+                            "#ff8800",
+                            "#9900ff",
+                            "#ff0066",
+                            "#00cc66",
+                            "#ffbb33"
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    animation: {
+                        animateRotate: false
+                    },
+                    onClick: function (event, elements) {
+                        if (elements.length > 0) {
+                            var clickedIndex = elements[0].index;
+
+                            
+                            highlightSkill(clickedIndex);
+                        }
+                    }
+                }
+            });
+
+            skillButtons = document.getElementsByClassName("skill-button");
+        });
+
+        var descriptions = document.getElementsByClassName('description');
+
+
+        Array.from(descriptions).forEach(function (desc) {
+            var fullText = desc.innerHTML;
+            var trimmedText = fullText.split(' ').slice(0, 15).join(' ');
+            var isExpanded = false;
+            var originalHeight = desc.clientHeight; 
+
+
+            if (trimmedText !== fullText) {
+                var readMoreLink = document.createElement('a');
+                readMoreLink.className = 'read-more';
+                readMoreLink.textContent = 'Read More';
+                readMoreLink.addEventListener('click', function () {
+                    if (isExpanded) {
+                        desc.style.height = originalHeight + 'px'; 
+                        desc.innerHTML = trimmedText + '... ';
+                        readMoreLink.textContent = 'Read More';
+                        isExpanded = false;
+                        if (desc.querySelector('.read-less')) {
+                            desc.querySelector('.read-less').remove(); 
+                        }
+                    } else {
+                        desc.style.height = 'auto'; 
+                        desc.innerHTML = fullText;
+                        readMoreLink.textContent = 'Read Less';
+                        isExpanded = true;
+                        var readLessLink = document.createElement('a'); 
+                        readLessLink.className = 'read-less';
+                        readLessLink.textContent = 'Read Less';
+                        readLessLink.addEventListener('click', function () {
+                            desc.style.height = originalHeight + 'px'; 
+                            desc.innerHTML = trimmedText + '... ';
+                            readMoreLink.textContent = 'Read More';
+                            isExpanded = false;
+                            desc.appendChild(readMoreLink); 
+                            desc.querySelector('.read-less').remove(); 
+                        });
+                        readLessLink.style.color = 'blue';
+                        desc.appendChild(readLessLink); 
+                    }
+                });
+
+                desc.style.height = originalHeight + 'px';
+                desc.innerHTML = trimmedText + '... ';
+                readMoreLink.style.color = 'blue';
+
+                desc.appendChild(readMoreLink);
+            }
+        });
+
+
+
+
+
+
+        const navbarToggle = document.querySelector('#navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        navbarToggle.addEventListener('click', function () {
+            navbarMenu.classList.toggle('show');
+        });
+
+    </script>
+    <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i> </a>
+
+    <script type="text/javascript">
+        $('.js-scroll-trigger').click(function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+    </script>
+
+</body>
+
+</html>
