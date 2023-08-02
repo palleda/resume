@@ -1,0 +1,249 @@
+body,
+html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.salim {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nm {
+    margin: 0;
+    color: #fff;
+}
+
+.jb {
+    margin: 0;
+    color: #ccc;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.Details,
+.Education,
+.TechnicalSkills,
+.Project {
+    padding: 20px;
+}
+
+.heading {
+    text-align: center;
+    color: #054f66;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+
+.Row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.det {
+    width: 100%;
+    max-width: 800px;
+    border: 5px dotted #ccc;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.sbj {
+    font-size: 20px;
+}
+
+
+
+
+.TechnicalSkills {
+    background-color: #f5f5f5;
+}
+
+.title {
+    text-align: center;
+    color: #054f66;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.udri {
+    font-family: cursive;
+}
+
+.head {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.user img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.nm {
+    font-size: 16px;
+}
+
+.jb {
+    font-size: 14px;
+}
+
+nav li a {
+    font-size: 14px;
+}
+
+
+.det {
+    max-width: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+}
+
+.gotopbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #27ae60;
+    bottom: 40px;
+    right: 50px;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 22px;
+}
+
+.container {
+    display: flow-root;
+    width: 110px;
+    max-width: 1150px;
+    margin: 0 auto;
+    column-gap: 20px;
+}
+
+.row {
+    position: relative;
+    display: flex;
+    transform: translate(25% -25%);
+
+
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.card {
+    font-family: 'Nunito', sans-serif;
+    flex: 1 1 21rem;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 4);
+    align-self: normal;
+    transition: all 0.3s;
+
+
+}
+
+.card:hover {
+    transform: scale(1.15);
+
+}
+
+
+.uday {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    margin-top: 10px;
+}
+
+.Internship {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .intro {
+        display: block;
+    }
+
+
+
+    #skillsChart {
+        display: block;
+    }
+
+    .det {
+        display: block;
+
+    }
+
+
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
